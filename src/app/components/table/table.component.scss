@@ -2,6 +2,11 @@ table {
     width: 100%;
 }
 
+td,
+th.mat-header-cell {
+    text-align: center;
+}
+
 .equal-size {
     width: 48px;
     height: 48px;
@@ -9,4 +14,9 @@ table {
 
 .rounded-circle {
     border-radius: 50% !important;
+}
+
+.small-size {
+    width: 28px;
+    height: 28px;
 }

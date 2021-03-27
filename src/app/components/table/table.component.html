@@ -28,7 +28,13 @@
 
     <ng-container matColumnDef="isOpen">
         <th mat-header-cell *matHeaderCellDef> Активная заявка </th>
-        <td mat-cell *matCellDef="let element"> {{element.isOpen}} </td>
+        <td mat-cell *matCellDef="let element">
+
+            <img *ngIf='element.isOpen; else none' class="small-size rounded-circle" src="https://www.seekpng.com/png/full/0-4878_free-green-tick-png-photos-green-tick-no.png" />
+            <ng-template #none>
+                <img class="small-size rounded-circle" src="https://www.recyclenow.com/sites/files/recyclenow/styles/large/public/media_wysiwyg/red-cross-md_0.png" />
+            </ng-template>
+
     </ng-container>
 
     <ng-container matColumnDef="userId">

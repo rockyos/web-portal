@@ -9,6 +9,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { ModalLocationComponent } from './components/modal-location/modal-location.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MatTableModule} from '@angular/material/table';
     LoginComponent,
     MainPageComponent,
     TableComponent,
-    ModalLocationComponent
+    ModalLocationComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
