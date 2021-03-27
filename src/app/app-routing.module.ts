@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'main',
     component: MainPageComponent
   },
+  {
+    path: '**',
+    redirectTo: 'main'
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

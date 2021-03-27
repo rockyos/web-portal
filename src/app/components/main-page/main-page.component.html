@@ -1,21 +1,47 @@
-<div class="container ">
-    <div class="py-5">
-        <div class="form-group">
-            <label class="form-control-label"> Локация </label> <br>
-            <button class="btn btn-primary" (click)="getLocation()">Выбрать локацию</button>
-        </div>
-        <div class="form-group">
-            <label class="form-control-label"> Тип проблемы </label>
-            <ng-select id="simple-ng-select" placeholder="Выберете тип проблемы" [clearable]="false" [dropdownPosition]="'bottom'" class="required" [items]="items" bindValue="value" [searchable]="false" bindLabel="text" formControlName="problemsType" [multiple]="false"
-                required>
-            </ng-select>
-        </div>
-        <div class="form-group">
-            <label class="form-control-label"> Тип проблемы </label>
-            <textarea class="form-control" placeholder="Опишите проблему" name="textarea" rows="4" formControlName="problemDescription"></textarea>
-        </div>
-    </div>
-
+<div class="sidenav">
+    <a href="#">Заявки</a>
+    <a href="#">Справочники</a>
+    <a href="#">Избирательный участок</a>
+    <a href="#">Информационный портал</a>
+    <a href="#">Контакты</a>
 </div>
+
+<!-- Page content -->
+<div class="main">
+    <div class="container">
+        <div class="d-flex py-5">
+            <button class="btn btn-primary mr-3" (click)="viewTask()">История заявок</button>
+            <button class="btn btn-primary" (click)="createTask()">Создание заявки</button>
+        </div>
+        <div *ngIf="isViewtask; else newTask">
+            tabl
+        </div>
+        <ng-template #newTask>
+
+            <div class="form-group">
+                <label class="form-control-label"> Локация </label> <br>
+                <button class="btn btn-primary" (click)="getLocation()">Выбрать локацию</button>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label"> Тип проблемы </label>
+                <ng-select id="simple-ng-select" placeholder="Выберете тип проблемы" [clearable]="false" [dropdownPosition]="'bottom'" class="required" [items]="items" bindValue="value" [searchable]="false" bindLabel="text" formControlName="problemsType" [multiple]="false"
+                    required>
+                </ng-select>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label"> Описание проблемы </label>
+                <textarea class="form-control" placeholder="Опишите проблему" name="textarea" rows="4" formControlName="problemDescription"></textarea>
+            </div>
+
+            <button class="btn btn-primary" (click)="create()">Создать заявку</button>
+        </ng-template>
+
+
+
+    </div>
+</div>
+
+
+
 
 <app-modal-location></app-modal-location>

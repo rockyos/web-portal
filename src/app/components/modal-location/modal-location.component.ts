@@ -13,7 +13,7 @@ export class ModalLocationComponent implements OnInit {
   constructor(private modalService: NgbModal) { }
 
   open() {
-      this.modalService.open(this.templateref, { size: 'lg', centered: true, windowClass: 'modal-xl' }).result.then();
+    this.modalService.open(this.templateref, { size: 'lg', centered: true, windowClass: 'modal-xl' }).result.then();
   }
 
   ngOnInit(): void {

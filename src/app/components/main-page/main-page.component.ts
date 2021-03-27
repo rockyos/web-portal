@@ -12,8 +12,9 @@ export class MainPageComponent implements OnInit {
     {value: 2, text: 'Состояние дорог'},
     {value: 3, text: 'Благоустройство'},
     {value: 4, text: 'ЖКХ'},
-
-  ]
+    {value: 4, text: 'Другие проблемы'},
+  ];
+  isViewtask = true;
 
   @ViewChild(ModalLocationComponent) private modal: ModalLocationComponent;
   constructor() { }
@@ -23,6 +24,18 @@ export class MainPageComponent implements OnInit {
   
   getLocation(){
     this.modal.open();
+  }
+
+  create(){
+
+  }
+
+  viewTask(){
+    if(!this.isViewtask){ this.isViewtask = !this.isViewtask;}
+  }
+
+  createTask(){
+    if(this.isViewtask){ this.isViewtask = !this.isViewtask;}
   }
   
 }
