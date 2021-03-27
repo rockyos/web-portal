@@ -14,7 +14,7 @@
             <button class="btn btn-primary" (click)="createTask()">Создание заявки</button>
         </div>
         <div *ngIf="isViewtask; else newTask">
-            tabl
+            <app-table></app-table>
         </div>
         <ng-template #newTask>
 
