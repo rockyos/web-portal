@@ -24,13 +24,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['createDate', 'location', 'problemsType', 'description','isOpen', 'userId', 'link'];
+  displayedColumns: string[] = ['userId','createDate', 'location', 'problemsType', 'description', 'link','isOpen'];
   dataSource = ELEMENT_DATA;
   @Input() newItem: any;
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
-      if(changes.newItem && this.newItem !== undefined){
+      if(changes.newItem && this.newItem){
         this.dataSource.push(this.newItem);
       }
     
