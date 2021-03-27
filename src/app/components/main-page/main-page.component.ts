@@ -15,19 +15,21 @@ export class MainPageComponent implements OnInit {
     {value: 4, text: 'Другие проблемы'},
   ];
   isViewtask = true;
+  isViewLocation = false;
 
   @ViewChild(ModalLocationComponent) private modal: ModalLocationComponent;
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+
   getLocation(){
     this.modal.open();
+    this.isViewLocation = true;
   }
 
   create(){
-
+this.items.push();
   }
 
   viewTask(){
@@ -37,5 +39,5 @@ export class MainPageComponent implements OnInit {
   createTask(){
     if(this.isViewtask){ this.isViewtask = !this.isViewtask;}
   }
-  
+
 }

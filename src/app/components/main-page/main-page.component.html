@@ -1,8 +1,8 @@
 <div class="sidenav">
     <a href="#">Заявки</a>
-    <a href="#">Справочники</a>
     <a href="#">Избирательный участок</a>
     <a href="#">Информационный портал</a>
+    <a href="#">Справочники</a>
     <a href="#">Контакты</a>
 </div>
 
@@ -17,10 +17,10 @@
             <app-table></app-table>
         </div>
         <ng-template #newTask>
-
             <div class="form-group">
                 <label class="form-control-label"> Локация </label> <br>
                 <button class="btn btn-primary" (click)="getLocation()">Выбрать локацию</button>
+                <span class="ml-3" *ngIf="isViewLocation">участок №30, ул.Соборная 40/2</span>
             </div>
             <div class="form-group">
                 <label class="form-control-label"> Тип проблемы </label>
@@ -32,12 +32,8 @@
                 <label class="form-control-label"> Описание проблемы </label>
                 <textarea class="form-control" placeholder="Опишите проблему" name="textarea" rows="4" formControlName="problemDescription"></textarea>
             </div>
-
             <button class="btn btn-primary" (click)="create()">Создать заявку</button>
         </ng-template>
-
-
-
     </div>
 </div>
 
