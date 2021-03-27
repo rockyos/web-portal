@@ -18,4 +18,9 @@ export class ModalLocationComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onLoadFunc(myIframe){
+    const data = myIframe.contentWindow.location.href;
+    console.log(data);
+  }
 }
