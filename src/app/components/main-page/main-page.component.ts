@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalLocationComponent } from '../modal-location/modal-location.component';
 
 @Component({
   selector: 'app-main-page',
@@ -15,12 +16,15 @@ export class MainPageComponent implements OnInit {
     {value: 6, text: 'Водоснабжение'},
     {value: 7, text: 'Подача'}
   ]
+
+  @ViewChild(ModalLocationComponent) private modal: ModalLocationComponent;
   constructor() { }
 
   ngOnInit(): void {
   }
   
-  onLoad(myIframe){
+  getLocation(){
+    this.modal.open();
   }
-
+  
 }
